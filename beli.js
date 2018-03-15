@@ -9,7 +9,7 @@ function beli(uang, obj, cb){
     }else {
       kembalian = 0;
       console.log(`uang gk cukup nih buat beli ${obj.item} kembaliannya cuma ${kembalian}`);
-      cb(0);
+      cb(kembalian);
     }
   }, obj.waktu);
 }

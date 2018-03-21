@@ -24,23 +24,20 @@ let obj = [{
 
 beli(20000, obj[0])
 .then((kembalian) => {
-    beli(kembalian, obj[1])
-    .then((kembalian) => {
-        beli(kembalian, obj[2])
-        .then((kembalian) => {
-            beli(kembalian, obj[3])
-            .then((kembalian) => {
-                beli(kembalian, obj[4])
-                .then((kembalian) => {
-                    return kembalian
-                })
-                .catch((reject) => {
-                    
-                })
-            })
-        })
-    })
+    return beli(kembalian, obj[1])
 })
-.catch((reject) => {
-
+.then((kembalian) =>{
+    return beli(kembalian, obj[2])
+})
+.then((kembalian) => {
+    return beli(kembalian, obj[3])
+})
+.then((kembalian) => {
+    return beli(kembalian, obj[4])
+})
+.then((kembalian) => {
+    return kembalian
+})
+.catch((gagalbeli) => {
+    
 })
